@@ -1,0 +1,2061 @@
+ICT-Olympiad-Management-System (Oracle)
+
+Md. Raihan Molla
+ID : 201910061
+CSE 60th
+
+****************************[ Question : 1 ]********************************************
+                           Insert command for table slno_tab
+
+SQL> create table slno_tab
+  2  (
+  3  autoslno number(6),
+  4  pid number(10),
+  5  constraint var_slno_tab_pk primary key(autoslno),
+  6  constraint var_slno_tab_pid_uq unique(pid)
+  7  );
+
+Table created.
+
+SQL> create sequence slno_tab_seq
+  2  minvalue 1
+  3  start with 1
+  4  increment by 1
+  5  cache 10;
+
+Sequence created.
+
+SQL> insert into slno_tab
+  2  values(&autoslno,&pid);
+Enter value for autoslno: slno_tab_seq.nextval
+Enter value for pid: 1001
+old   2: values(&autoslno,&pid)
+new   2: values(slno_tab_seq.nextval,1001)
+
+1 row created.
+
+SQL> /
+Enter value for autoslno: slno_tab_seq.nextval
+Enter value for pid: 1005
+old   2: values(&autoslno,&pid)
+new   2: values(slno_tab_seq.nextval,1005)
+
+1 row created.
+
+SQL> /
+Enter value for autoslno: slno_tab_seq.nextval
+Enter value for pid: 1002
+old   2: values(&autoslno,&pid)
+new   2: values(slno_tab_seq.nextval,1002)
+
+1 row created.
+
+SQL> /
+Enter value for autoslno: slno_tab_seq.nextval
+Enter value for pid: 1004
+old   2: values(&autoslno,&pid)
+new   2: values(slno_tab_seq.nextval,1004)
+
+1 row created.
+
+SQL> /
+Enter value for autoslno: slno_tab_seq.nextval
+Enter value for pid: 1003
+old   2: values(&autoslno,&pid)
+new   2: values(slno_tab_seq.nextval,1003)
+
+1 row created.
+
+SQL> /
+Enter value for autoslno: slno_tab_seq.nextval
+Enter value for pid: 1006
+old   2: values(&autoslno,&pid)
+new   2: values(slno_tab_seq.nextval,1006)
+
+1 row created.
+
+SQL> /
+Enter value for autoslno: slno_tab_seq.nextval
+Enter value for pid: 1007
+old   2: values(&autoslno,&pid)
+new   2: values(slno_tab_seq.nextval,1007)
+
+1 row created.
+
+SQL> /
+Enter value for autoslno: slno_tab_seq.nextval
+Enter value for pid: 1008
+old   2: values(&autoslno,&pid)
+new   2: values(slno_tab_seq.nextval,1008)
+
+1 row created.
+
+SQL> /
+Enter value for autoslno: slno_tab_seq.nextval
+Enter value for pid: 1010
+old   2: values(&autoslno,&pid)
+new   2: values(slno_tab_seq.nextval,1010)
+
+1 row created.
+
+SQL> /
+Enter value for autoslno: slno_tab_seq.nextval
+Enter value for pid: 1009
+old   2: values(&autoslno,&pid)
+new   2: values(slno_tab_seq.nextval,1009)
+
+1 row created.
+
+SQL> /
+Enter value for autoslno: slno_tab_seq.nextval
+Enter value for pid: 1011
+old   2: values(&autoslno,&pid)
+new   2: values(slno_tab_seq.nextval,1011)
+
+1 row created.
+
+SQL> /
+Enter value for autoslno: slno_tab_seq.nextval
+Enter value for pid: 1012
+old   2: values(&autoslno,&pid)
+new   2: values(slno_tab_seq.nextval,1012)
+
+1 row created.
+
+SQL> select * from slno_tab;
+
+  AUTOSLNO        PID                                                           
+---------- ----------                                                           
+         2       1005                                                           
+         3       1002                                                           
+         4       1004                                                           
+         5       1003                                                           
+         6       1006                                                           
+         7       1007                                                           
+         8       1008                                                           
+         9       1010                                                           
+        10       1009                                                           
+         1       1001                                                           
+        11       1011                                                           
+
+  AUTOSLNO        PID                                                           
+---------- ----------                                                           
+        12       1012                                                           
+
+12 rows selected.
+
+*******************************************************************************************
+
+SQL> create table answer_tab   ****************************[ Create and insert all answer in ANSWER_TAB table ]*********      
+  2  (
+  3  qno number(6),
+  4  answer number(8,2),
+  5  constraint var_qno_pk primary key(qno)
+  6  );
+
+Table created.
+
+SQL> insert into answer_tab
+  2  values(&qno,&answer);
+Enter value for qno: 1
+Enter value for answer: 5.2
+old   2: values(&qno,&answer)
+new   2: values(1,5.2)
+
+1 row created.
+
+SQL> /
+Enter value for qno: 2
+Enter value for answer: 33
+old   2: values(&qno,&answer)
+new   2: values(2,33)
+
+1 row created.
+
+SQL> /
+Enter value for qno: 3
+Enter value for answer: 5.5
+old   2: values(&qno,&answer)
+new   2: values(3,5.5)
+
+1 row created.
+
+SQL> /
+Enter value for qno: 4
+Enter value for answer: 6.5
+old   2: values(&qno,&answer)
+new   2: values(4,6.5)
+
+1 row created.
+
+SQL> /
+Enter value for qno: 5
+Enter value for answer: 7.5
+old   2: values(&qno,&answer)
+new   2: values(5,7.5)
+
+1 row created.
+
+SQL> /
+Enter value for qno: 6
+Enter value for answer: 8.0
+old   2: values(&qno,&answer)
+new   2: values(6,8.0)
+
+1 row created.
+
+SQL> /
+Enter value for qno: 7
+Enter value for answer: 8.0
+old   2: values(&qno,&answer)
+new   2: values(7,8.0)
+
+1 row created.
+
+SQL> /
+Enter value for qno: 8
+Enter value for answer: 0
+old   2: values(&qno,&answer)
+new   2: values(8,0)
+
+1 row created.
+
+SQL> /
+Enter value for qno: 9
+Enter value for answer: 112
+old   2: values(&qno,&answer)
+new   2: values(9,112)
+
+1 row created.
+
+SQL> /
+Enter value for qno: 10
+Enter value for answer: 50000
+old   2: values(&qno,&answer)
+new   2: values(10,50000)
+
+1 row created.
+
+SQL> select * from answer_tab;
+
+       QNO     ANSWER                                                           
+---------- ----------                                                           
+         1        5.2                                                           
+         2         33                                                           
+         3        5.5                                                           
+         4        6.5                                                           
+         5        7.5                                                           
+         6          8                                                           
+         7          8                                                           
+         8          0                                                           
+         9        112                                                           
+        10      50000                                                           
+
+10 rows selected.
+
+
+******************************************[ Question : 2 ]***************************************************************
+                             Plsql block to get serial no for a particular pid and insert 10 rows at a time.
+
+
+SQL> create table final_tab
+  2  (
+  3  pid number(10),
+  4  qno number(2),
+  5  answer number(8,2),
+  6  result number(1),
+  7  slno number(10),
+  8  constraint var_final_tab_qno_fk foreign key(qno) references answer_tab(qno),
+  9  constraint var_final_tab_uq unique(pid,qno,slno),
+ 10  constraint var_final_tab_slno_fk foreign key(slno) references slno_tab(autoslno)
+ 11  );
+
+Table created.
+
+                         ********************[ Works like google form ]***********************
+
+SQL> declare           ****************************[ For adding first record in FINAL_TAB table ]*****************************
+  2  no number(8);
+  3  n1 number(8);
+  4  q1 number(8,2);
+  5  q2 number(8,2);
+  6  q3 number(8,2);
+  7  q4 number(8,2);
+  8  q5 number(8,2);
+  9  q6 number(8,2);
+ 10  q7 number(8,2);
+ 11  q8 number(8,2);
+ 12  q9 number(8,2);
+ 13  q10 number(8,2);
+ 14  begin
+ 15  no:=&slno;
+ 16  select pid into n1 from slno_tab where autoslno=no;
+ 17  for i in 1..10 loop
+ 18  insert into final_tab
+ 19  (pid,qno,slno)
+ 20  values(n1,i,no);
+ 21  end loop;
+ 22  q1:=&Question1;
+ 23  update final_tab
+ 24  set answer=q1
+ 25  where pid=n1 and qno=1;
+ 26  q2:=&Question2;
+ 27  update final_tab
+ 28  set answer=q2
+ 29  where pid=n1 and qno=2;
+ 30  q3:=&Question3;
+ 31  update final_tab
+ 32  set answer=q3
+ 33  where pid=n1 and qno=3;
+ 34  q4:=&Question4;
+ 35  update final_tab
+ 36  set answer=q4
+ 37  where pid=n1 and qno=4;
+ 38  q5:=&Question5;
+ 39  update final_tab
+ 40  set answer=q5
+ 41  where pid=n1 and qno=5;
+ 42  q6:=&Question6;
+ 43  update final_tab
+ 44  set answer=q6
+ 45  where pid=n1 and qno=6;
+ 46  q7:=&Question7;
+ 47  update final_tab
+ 48  set answer=q7
+ 49  where pid=n1 and qno=7;
+ 50  q8:=&Question8;
+ 51  update final_tab
+ 52  set answer=q8
+ 53  where pid=n1 and qno=8;
+ 54  q9:=&Question9;
+ 55  update final_tab
+ 56  set answer=q9
+ 57  where pid=n1 and qno=9;
+ 58  q10:=&Question10;
+ 59  update final_tab
+ 60  set answer=q10
+ 61  where pid=n1 and qno=10;
+ 62  end;
+ 63  /
+
+
+
+Enter value for slno: 1        *************[ USER INPUT (slno) ]*************************************************
+old  15: no:=&slno;
+new  15: no:=1;
+Enter value for question1: 5.2    *************[ USER INPUT ( 10 ANSWERS SERIALLY ) ]***************************
+old  22: q1:=&Question1;
+new  22: q1:=5.2;
+Enter value for question2: 33
+old  26: q2:=&Question2;
+new  26: q2:=33;
+Enter value for question3: 5.5
+old  30: q3:=&Question3;
+new  30: q3:=5.5;
+Enter value for question4: 6
+old  34: q4:=&Question4;
+new  34: q4:=6;
+Enter value for question5: 7.5
+old  38: q5:=&Question5;
+new  38: q5:=7.5;
+Enter value for question6: 0
+old  42: q6:=&Question6;
+new  42: q6:=0;
+Enter value for question7: 9
+old  46: q7:=&Question7;
+new  46: q7:=9;
+Enter value for question8: 0
+old  50: q8:=&Question8;
+new  50: q8:=0;
+Enter value for question9: 112
+old  54: q9:=&Question9;
+new  54: q9:=112;
+Enter value for question10: 0
+old  58: q10:=&Question10;
+new  58: q10:=0;
+
+PL/SQL procedure successfully completed.     **********************[ One record added ]******************************
+
+SQL> declare         **********************[ For another record ]*****************************
+  2  no number(8);
+  3  n1 number(8);
+  4  q1 number(8,2);
+  5  q2 number(8,2);
+  6  q3 number(8,2);
+  7  q4 number(8,2);
+  8  q5 number(8,2);
+  9  q6 number(8,2);
+ 10  q7 number(8,2);
+ 11  q8 number(8,2);
+ 12  q9 number(8,2);
+ 13  q10 number(8,2);
+ 14  begin
+ 15  no:=&slno;
+ 16  select pid into n1 from slno_tab where autoslno=no;
+ 17  for i in 1..10 loop
+ 18  insert into final_tab
+ 19  (pid,qno,slno)
+ 20  values(n1,i,no);
+ 21  end loop;
+ 22  q1:=&Question1;
+ 23  update final_tab
+ 24  set answer=q1
+ 25  where pid=n1 and qno=1;
+ 26  q2:=&Question2;
+ 27  update final_tab
+ 28  set answer=q2
+ 29  where pid=n1 and qno=2;
+ 30  q3:=&Question3;
+ 31  update final_tab
+ 32  set answer=q3
+ 33  where pid=n1 and qno=3;
+ 34  q4:=&Question4;
+ 35  update final_tab
+ 36  set answer=q4
+ 37  where pid=n1 and qno=4;
+ 38  q5:=&Question5;
+ 39  update final_tab
+ 40  set answer=q5
+ 41  where pid=n1 and qno=5;
+ 42  q6:=&Question6;
+ 43  update final_tab
+ 44  set answer=q6
+ 45  where pid=n1 and qno=6;
+ 46  q7:=&Question7;
+ 47  update final_tab
+ 48  set answer=q7
+ 49  where pid=n1 and qno=7;
+ 50  q8:=&Question8;
+ 51  update final_tab
+ 52  set answer=q8
+ 53  where pid=n1 and qno=8;
+ 54  q9:=&Question9;
+ 55  update final_tab
+ 56  set answer=q9
+ 57  where pid=n1 and qno=9;
+ 58  q10:=&Question10;
+ 59  update final_tab
+ 60  set answer=q10
+ 61  where pid=n1 and qno=10;
+ 62  end;
+ 63  /
+
+
+
+Enter value for slno: 2         *************[ USER INPUT (slno) ]*************************************************
+old  15: no:=&slno;
+new  15: no:=2;
+Enter value for question1: 33    *************[ USER INPUT ( 10 ANSWERS SERIALLY ) ]***************************
+old  22: q1:=&Question1;
+new  22: q1:=33;
+Enter value for question2: 33
+old  26: q2:=&Question2;
+new  26: q2:=33;
+Enter value for question3: 45
+old  30: q3:=&Question3;
+new  30: q3:=45;
+Enter value for question4: 76
+old  34: q4:=&Question4;
+new  34: q4:=76;
+Enter value for question5: 0
+old  38: q5:=&Question5;
+new  38: q5:=0;
+Enter value for question6: 8.0
+old  42: q6:=&Question6;
+new  42: q6:=8.0;
+Enter value for question7: 8.0
+old  46: q7:=&Question7;
+new  46: q7:=8.0;
+Enter value for question8: 3
+old  50: q8:=&Question8;
+new  50: q8:=3;
+Enter value for question9: 112
+old  54: q9:=&Question9;
+new  54: q9:=112;
+Enter value for question10: 54
+old  58: q10:=&Question10;
+new  58: q10:=54;
+
+PL/SQL procedure successfully completed.    **********************[ Another record added ]******************************
+
+SQL> declare         **********************[ For another record ]*****************************
+  2  no number(8);
+  3  n1 number(8);
+  4  q1 number(8,2);
+  5  q2 number(8,2);
+  6  q3 number(8,2);
+  7  q4 number(8,2);
+  8  q5 number(8,2);
+  9  q6 number(8,2);
+ 10  q7 number(8,2);
+ 11  q8 number(8,2);
+ 12  q9 number(8,2);
+ 13  q10 number(8,2);
+ 14  begin
+ 15  no:=&slno;
+ 16  select pid into n1 from slno_tab where autoslno=no;
+ 17  for i in 1..10 loop
+ 18  insert into final_tab
+ 19  (pid,qno,slno)
+ 20  values(n1,i,no);
+ 21  end loop;
+ 22  q1:=&Question1;
+ 23  update final_tab
+ 24  set answer=q1
+ 25  where pid=n1 and qno=1;
+ 26  q2:=&Question2;
+ 27  update final_tab
+ 28  set answer=q2
+ 29  where pid=n1 and qno=2;
+ 30  q3:=&Question3;
+ 31  update final_tab
+ 32  set answer=q3
+ 33  where pid=n1 and qno=3;
+ 34  q4:=&Question4;
+ 35  update final_tab
+ 36  set answer=q4
+ 37  where pid=n1 and qno=4;
+ 38  q5:=&Question5;
+ 39  update final_tab
+ 40  set answer=q5
+ 41  where pid=n1 and qno=5;
+ 42  q6:=&Question6;
+ 43  update final_tab
+ 44  set answer=q6
+ 45  where pid=n1 and qno=6;
+ 46  q7:=&Question7;
+ 47  update final_tab
+ 48  set answer=q7
+ 49  where pid=n1 and qno=7;
+ 50  q8:=&Question8;
+ 51  update final_tab
+ 52  set answer=q8
+ 53  where pid=n1 and qno=8;
+ 54  q9:=&Question9;
+ 55  update final_tab
+ 56  set answer=q9
+ 57  where pid=n1 and qno=9;
+ 58  q10:=&Question10;
+ 59  update final_tab
+ 60  set answer=q10
+ 61  where pid=n1 and qno=10;
+ 62  end;
+ 63  /
+
+
+
+Enter value for slno: 3   *************[ USER INPUT (slno) ]*************************************************
+old  15: no:=&slno;
+new  15: no:=3;
+Enter value for question1: 5.2     *************[ USER INPUT ( 10 ANSWERS SERIALLY ) ]***************************
+old  22: q1:=&Question1;
+new  22: q1:=5.2;
+Enter value for question2: 33
+old  26: q2:=&Question2;
+new  26: q2:=33;
+Enter value for question3: 5.5
+old  30: q3:=&Question3;
+new  30: q3:=5.5;
+Enter value for question4: 6.5
+old  34: q4:=&Question4;
+new  34: q4:=6.5;
+Enter value for question5: 7.5
+old  38: q5:=&Question5;
+new  38: q5:=7.5;
+Enter value for question6: 8.0
+old  42: q6:=&Question6;
+new  42: q6:=8.0;
+Enter value for question7: 0
+old  46: q7:=&Question7;
+new  46: q7:=0;
+Enter value for question8: 0
+old  50: q8:=&Question8;
+new  50: q8:=0;
+Enter value for question9: 112
+old  54: q9:=&Question9;
+new  54: q9:=112;
+Enter value for question10: 43
+old  58: q10:=&Question10;
+new  58: q10:=43;
+
+PL/SQL procedure successfully completed.     **********************[ Another record added ]******************************
+
+SQL> declare                  **********************[ For another record ]*****************************
+  2  no number(8);
+  3  n1 number(8);
+  4  q1 number(8,2);
+  5  q2 number(8,2);
+  6  q3 number(8,2);
+  7  q4 number(8,2);
+  8  q5 number(8,2);
+  9  q6 number(8,2);
+ 10  q7 number(8,2);
+ 11  q8 number(8,2);
+ 12  q9 number(8,2);
+ 13  q10 number(8,2);
+ 14  begin
+ 15  no:=&slno;
+ 16  select pid into n1 from slno_tab where autoslno=no;
+ 17  for i in 1..10 loop
+ 18  insert into final_tab
+ 19  (pid,qno,slno)
+ 20  values(n1,i,no);
+ 21  end loop;
+ 22  q1:=&Question1;
+ 23  update final_tab
+ 24  set answer=q1
+ 25  where pid=n1 and qno=1;
+ 26  q2:=&Question2;
+ 27  update final_tab
+ 28  set answer=q2
+ 29  where pid=n1 and qno=2;
+ 30  q3:=&Question3;
+ 31  update final_tab
+ 32  set answer=q3
+ 33  where pid=n1 and qno=3;
+ 34  q4:=&Question4;
+ 35  update final_tab
+ 36  set answer=q4
+ 37  where pid=n1 and qno=4;
+ 38  q5:=&Question5;
+ 39  update final_tab
+ 40  set answer=q5
+ 41  where pid=n1 and qno=5;
+ 42  q6:=&Question6;
+ 43  update final_tab
+ 44  set answer=q6
+ 45  where pid=n1 and qno=6;
+ 46  q7:=&Question7;
+ 47  update final_tab
+ 48  set answer=q7
+ 49  where pid=n1 and qno=7;
+ 50  q8:=&Question8;
+ 51  update final_tab
+ 52  set answer=q8
+ 53  where pid=n1 and qno=8;
+ 54  q9:=&Question9;
+ 55  update final_tab
+ 56  set answer=q9
+ 57  where pid=n1 and qno=9;
+ 58  q10:=&Question10;
+ 59  update final_tab
+ 60  set answer=q10
+ 61  where pid=n1 and qno=10;
+ 62  end;
+ 63  /
+
+
+
+Enter value for slno: 4         *************[ USER INPUT (slno) ]*************************************************
+old  15: no:=&slno;
+new  15: no:=4;
+Enter value for question1: 5.2    *************[ USER INPUT ( 10 ANSWERS SERIALLY ) ]***************************
+old  22: q1:=&Question1;
+new  22: q1:=5.2;
+Enter value for question2: 33
+old  26: q2:=&Question2;
+new  26: q2:=33;
+Enter value for question3: 5.5
+old  30: q3:=&Question3;
+new  30: q3:=5.5;
+Enter value for question4: 6
+old  34: q4:=&Question4;
+new  34: q4:=6;
+Enter value for question5: 7.5
+old  38: q5:=&Question5;
+new  38: q5:=7.5;
+Enter value for question6: 0
+old  42: q6:=&Question6;
+new  42: q6:=0;
+Enter value for question7: 9
+old  46: q7:=&Question7;
+new  46: q7:=9;
+Enter value for question8: 0
+old  50: q8:=&Question8;
+new  50: q8:=0;
+Enter value for question9: 112
+old  54: q9:=&Question9;
+new  54: q9:=112;
+Enter value for question10: 0
+old  58: q10:=&Question10;
+new  58: q10:=0;
+
+PL/SQL procedure successfully completed.      **********************[ Another record added ]******************************
+
+SQL> declare           **********************[ For another record ]*****************************
+  2  no number(8);
+  3  n1 number(8);
+  4  q1 number(8,2);
+  5  q2 number(8,2);
+  6  q3 number(8,2);
+  7  q4 number(8,2);
+  8  q5 number(8,2);
+  9  q6 number(8,2);
+ 10  q7 number(8,2);
+ 11  q8 number(8,2);
+ 12  q9 number(8,2);
+ 13  q10 number(8,2);
+ 14  begin
+ 15  no:=&slno;
+ 16  select pid into n1 from slno_tab where autoslno=no;
+ 17  for i in 1..10 loop
+ 18  insert into final_tab
+ 19  (pid,qno,slno)
+ 20  values(n1,i,no);
+ 21  end loop;
+ 22  q1:=&Question1;
+ 23  update final_tab
+ 24  set answer=q1
+ 25  where pid=n1 and qno=1;
+ 26  q2:=&Question2;
+ 27  update final_tab
+ 28  set answer=q2
+ 29  where pid=n1 and qno=2;
+ 30  q3:=&Question3;
+ 31  update final_tab
+ 32  set answer=q3
+ 33  where pid=n1 and qno=3;
+ 34  q4:=&Question4;
+ 35  update final_tab
+ 36  set answer=q4
+ 37  where pid=n1 and qno=4;
+ 38  q5:=&Question5;
+ 39  update final_tab
+ 40  set answer=q5
+ 41  where pid=n1 and qno=5;
+ 42  q6:=&Question6;
+ 43  update final_tab
+ 44  set answer=q6
+ 45  where pid=n1 and qno=6;
+ 46  q7:=&Question7;
+ 47  update final_tab
+ 48  set answer=q7
+ 49  where pid=n1 and qno=7;
+ 50  q8:=&Question8;
+ 51  update final_tab
+ 52  set answer=q8
+ 53  where pid=n1 and qno=8;
+ 54  q9:=&Question9;
+ 55  update final_tab
+ 56  set answer=q9
+ 57  where pid=n1 and qno=9;
+ 58  q10:=&Question10;
+ 59  update final_tab
+ 60  set answer=q10
+ 61  where pid=n1 and qno=10;
+ 62  end;
+ 63  /
+
+
+
+Enter value for slno: 5    *************[ USER INPUT (slno) ]*************************************************
+old  15: no:=&slno;
+new  15: no:=5;
+Enter value for question1: 5.2    *************[ USER INPUT ( 10 ANSWERS SERIALLY ) ]***************************
+old  22: q1:=&Question1;
+new  22: q1:=5.2;
+Enter value for question2: 33
+old  26: q2:=&Question2;
+new  26: q2:=33;
+Enter value for question3: 5.5
+old  30: q3:=&Question3;
+new  30: q3:=5.5;
+Enter value for question4: 6.5
+old  34: q4:=&Question4;
+new  34: q4:=6.5;
+Enter value for question5: 7.5
+old  38: q5:=&Question5;
+new  38: q5:=7.5;
+Enter value for question6: 0
+old  42: q6:=&Question6;
+new  42: q6:=0;
+Enter value for question7: 0
+old  46: q7:=&Question7;
+new  46: q7:=0;
+Enter value for question8: 0
+old  50: q8:=&Question8;
+new  50: q8:=0;
+Enter value for question9: 112
+old  54: q9:=&Question9;
+new  54: q9:=112;
+Enter value for question10: 50000
+old  58: q10:=&Question10;
+new  58: q10:=50000;
+
+PL/SQL procedure successfully completed.    **********************[ Another record added ]******************************
+
+SQL> declare             **********************[ For another record ]*****************************
+  2  no number(8);
+  3  n1 number(8);
+  4  q1 number(8,2);
+  5  q2 number(8,2);
+  6  q3 number(8,2);
+  7  q4 number(8,2);
+  8  q5 number(8,2);
+  9  q6 number(8,2);
+ 10  q7 number(8,2);
+ 11  q8 number(8,2);
+ 12  q9 number(8,2);
+ 13  q10 number(8,2);
+ 14  begin
+ 15  no:=&slno;
+ 16  select pid into n1 from slno_tab where autoslno=no;
+ 17  for i in 1..10 loop
+ 18  insert into final_tab
+ 19  (pid,qno,slno)
+ 20  values(n1,i,no);
+ 21  end loop;
+ 22  q1:=&Question1;
+ 23  update final_tab
+ 24  set answer=q1
+ 25  where pid=n1 and qno=1;
+ 26  q2:=&Question2;
+ 27  update final_tab
+ 28  set answer=q2
+ 29  where pid=n1 and qno=2;
+ 30  q3:=&Question3;
+ 31  update final_tab
+ 32  set answer=q3
+ 33  where pid=n1 and qno=3;
+ 34  q4:=&Question4;
+ 35  update final_tab
+ 36  set answer=q4
+ 37  where pid=n1 and qno=4;
+ 38  q5:=&Question5;
+ 39  update final_tab
+ 40  set answer=q5
+ 41  where pid=n1 and qno=5;
+ 42  q6:=&Question6;
+ 43  update final_tab
+ 44  set answer=q6
+ 45  where pid=n1 and qno=6;
+ 46  q7:=&Question7;
+ 47  update final_tab
+ 48  set answer=q7
+ 49  where pid=n1 and qno=7;
+ 50  q8:=&Question8;
+ 51  update final_tab
+ 52  set answer=q8
+ 53  where pid=n1 and qno=8;
+ 54  q9:=&Question9;
+ 55  update final_tab
+ 56  set answer=q9
+ 57  where pid=n1 and qno=9;
+ 58  q10:=&Question10;
+ 59  update final_tab
+ 60  set answer=q10
+ 61  where pid=n1 and qno=10;
+ 62  end;
+ 63  /
+
+
+
+Enter value for slno: 6     *************[ USER INPUT (slno) ]*************************************************
+old  15: no:=&slno;
+new  15: no:=6;
+Enter value for question1: 5.2     *************[ USER INPUT ( 10 ANSWERS SERIALLY ) ]***************************
+old  22: q1:=&Question1;
+new  22: q1:=5.2;
+Enter value for question2: 33
+old  26: q2:=&Question2;
+new  26: q2:=33;
+Enter value for question3: 5.5
+old  30: q3:=&Question3;
+new  30: q3:=5.5;
+Enter value for question4: 6.5
+old  34: q4:=&Question4;
+new  34: q4:=6.5;
+Enter value for question5: 7.5
+old  38: q5:=&Question5;
+new  38: q5:=7.5;
+Enter value for question6: 8.0
+old  42: q6:=&Question6;
+new  42: q6:=8.0;
+Enter value for question7: 8.0
+old  46: q7:=&Question7;
+new  46: q7:=8.0;
+Enter value for question8: 0
+old  50: q8:=&Question8;
+new  50: q8:=0;
+Enter value for question9: 112
+old  54: q9:=&Question9;
+new  54: q9:=112;
+Enter value for question10: 64
+old  58: q10:=&Question10;
+new  58: q10:=64;
+
+PL/SQL procedure successfully completed.    **********************[ Another record added ]******************************
+
+SQL> declare                **********************[ For another record ]*****************************
+  2  no number(8);
+  3  n1 number(8);
+  4  q1 number(8,2);
+  5  q2 number(8,2);
+  6  q3 number(8,2);
+  7  q4 number(8,2);
+  8  q5 number(8,2);
+  9  q6 number(8,2);
+ 10  q7 number(8,2);
+ 11  q8 number(8,2);
+ 12  q9 number(8,2);
+ 13  q10 number(8,2);
+ 14  begin
+ 15  no:=&slno;
+ 16  select pid into n1 from slno_tab where autoslno=no;
+ 17  for i in 1..10 loop
+ 18  insert into final_tab
+ 19  (pid,qno,slno)
+ 20  values(n1,i,no);
+ 21  end loop;
+ 22  q1:=&Question1;
+ 23  update final_tab
+ 24  set answer=q1
+ 25  where pid=n1 and qno=1;
+ 26  q2:=&Question2;
+ 27  update final_tab
+ 28  set answer=q2
+ 29  where pid=n1 and qno=2;
+ 30  q3:=&Question3;
+ 31  update final_tab
+ 32  set answer=q3
+ 33  where pid=n1 and qno=3;
+ 34  q4:=&Question4;
+ 35  update final_tab
+ 36  set answer=q4
+ 37  where pid=n1 and qno=4;
+ 38  q5:=&Question5;
+ 39  update final_tab
+ 40  set answer=q5
+ 41  where pid=n1 and qno=5;
+ 42  q6:=&Question6;
+ 43  update final_tab
+ 44  set answer=q6
+ 45  where pid=n1 and qno=6;
+ 46  q7:=&Question7;
+ 47  update final_tab
+ 48  set answer=q7
+ 49  where pid=n1 and qno=7;
+ 50  q8:=&Question8;
+ 51  update final_tab
+ 52  set answer=q8
+ 53  where pid=n1 and qno=8;
+ 54  q9:=&Question9;
+ 55  update final_tab
+ 56  set answer=q9
+ 57  where pid=n1 and qno=9;
+ 58  q10:=&Question10;
+ 59  update final_tab
+ 60  set answer=q10
+ 61  where pid=n1 and qno=10;
+ 62  end;
+ 63  /
+
+
+
+Enter value for slno: 7    *************[ USER INPUT (slno) ]*************************************************
+old  15: no:=&slno;
+new  15: no:=7;
+Enter value for question1: 5.2   *************[ USER INPUT ( 10 ANSWERS SERIALLY ) ]***************************
+old  22: q1:=&Question1;
+new  22: q1:=5.2;
+Enter value for question2: 33
+old  26: q2:=&Question2;
+new  26: q2:=33;
+Enter value for question3: 5.5
+old  30: q3:=&Question3;
+new  30: q3:=5.5;
+Enter value for question4: 6.5
+old  34: q4:=&Question4;
+new  34: q4:=6.5;
+Enter value for question5: 7.5
+old  38: q5:=&Question5;
+new  38: q5:=7.5;
+Enter value for question6: 0
+old  42: q6:=&Question6;
+new  42: q6:=0;
+Enter value for question7: 0
+old  46: q7:=&Question7;
+new  46: q7:=0;
+Enter value for question8: 0
+old  50: q8:=&Question8;
+new  50: q8:=0;
+Enter value for question9: 0
+old  54: q9:=&Question9;
+new  54: q9:=0;
+Enter value for question10: 0
+old  58: q10:=&Question10;
+new  58: q10:=0;
+
+PL/SQL procedure successfully completed.    **********************[ Another record added ]******************************
+
+SQL> declare                 **********************[ For another record ]*****************************
+  2  no number(8);
+  3  n1 number(8);
+  4  q1 number(8,2);
+  5  q2 number(8,2);
+  6  q3 number(8,2);
+  7  q4 number(8,2);
+  8  q5 number(8,2);
+  9  q6 number(8,2);
+ 10  q7 number(8,2);
+ 11  q8 number(8,2);
+ 12  q9 number(8,2);
+ 13  q10 number(8,2);
+ 14  begin
+ 15  no:=&slno;
+ 16  select pid into n1 from slno_tab where autoslno=no;
+ 17  for i in 1..10 loop
+ 18  insert into final_tab
+ 19  (pid,qno,slno)
+ 20  values(n1,i,no);
+ 21  end loop;
+ 22  q1:=&Question1;
+ 23  update final_tab
+ 24  set answer=q1
+ 25  where pid=n1 and qno=1;
+ 26  q2:=&Question2;
+ 27  update final_tab
+ 28  set answer=q2
+ 29  where pid=n1 and qno=2;
+ 30  q3:=&Question3;
+ 31  update final_tab
+ 32  set answer=q3
+ 33  where pid=n1 and qno=3;
+ 34  q4:=&Question4;
+ 35  update final_tab
+ 36  set answer=q4
+ 37  where pid=n1 and qno=4;
+ 38  q5:=&Question5;
+ 39  update final_tab
+ 40  set answer=q5
+ 41  where pid=n1 and qno=5;
+ 42  q6:=&Question6;
+ 43  update final_tab
+ 44  set answer=q6
+ 45  where pid=n1 and qno=6;
+ 46  q7:=&Question7;
+ 47  update final_tab
+ 48  set answer=q7
+ 49  where pid=n1 and qno=7;
+ 50  q8:=&Question8;
+ 51  update final_tab
+ 52  set answer=q8
+ 53  where pid=n1 and qno=8;
+ 54  q9:=&Question9;
+ 55  update final_tab
+ 56  set answer=q9
+ 57  where pid=n1 and qno=9;
+ 58  q10:=&Question10;
+ 59  update final_tab
+ 60  set answer=q10
+ 61  where pid=n1 and qno=10;
+ 62  end;
+ 63  /
+
+
+
+Enter value for slno: 8      *************[ USER INPUT (slno) ]*************************************************
+old  15: no:=&slno;
+new  15: no:=8;
+Enter value for question1: 5.2   *************[ USER INPUT ( 10 ANSWERS SERIALLY ) ]***************************
+old  22: q1:=&Question1;
+new  22: q1:=5.2;
+Enter value for question2: 33
+old  26: q2:=&Question2;
+new  26: q2:=33;
+Enter value for question3: 5.5
+old  30: q3:=&Question3;
+new  30: q3:=5.5;
+Enter value for question4: 6.5
+old  34: q4:=&Question4;
+new  34: q4:=6.5;
+Enter value for question5: 7.5
+old  38: q5:=&Question5;
+new  38: q5:=7.5;
+Enter value for question6: 0
+old  42: q6:=&Question6;
+new  42: q6:=0;
+Enter value for question7: 0
+old  46: q7:=&Question7;
+new  46: q7:=0;
+Enter value for question8: 56
+old  50: q8:=&Question8;
+new  50: q8:=56;
+Enter value for question9: 0
+old  54: q9:=&Question9;
+new  54: q9:=0;
+Enter value for question10: 0
+old  58: q10:=&Question10;
+new  58: q10:=0;
+
+PL/SQL procedure successfully completed.     **********************[ Another record added ]******************************
+
+SQL> declare              **********************[ For another record ]*****************************
+  2  no number(8);
+  3  n1 number(8);
+  4  q1 number(8,2);
+  5  q2 number(8,2);
+  6  q3 number(8,2);
+  7  q4 number(8,2);
+  8  q5 number(8,2);
+  9  q6 number(8,2);
+ 10  q7 number(8,2);
+ 11  q8 number(8,2);
+ 12  q9 number(8,2);
+ 13  q10 number(8,2);
+ 14  begin
+ 15  no:=&slno;
+ 16  select pid into n1 from slno_tab where autoslno=no;
+ 17  for i in 1..10 loop
+ 18  insert into final_tab
+ 19  (pid,qno,slno)
+ 20  values(n1,i,no);
+ 21  end loop;
+ 22  q1:=&Question1;
+ 23  update final_tab
+ 24  set answer=q1
+ 25  where pid=n1 and qno=1;
+ 26  q2:=&Question2;
+ 27  update final_tab
+ 28  set answer=q2
+ 29  where pid=n1 and qno=2;
+ 30  q3:=&Question3;
+ 31  update final_tab
+ 32  set answer=q3
+ 33  where pid=n1 and qno=3;
+ 34  q4:=&Question4;
+ 35  update final_tab
+ 36  set answer=q4
+ 37  where pid=n1 and qno=4;
+ 38  q5:=&Question5;
+ 39  update final_tab
+ 40  set answer=q5
+ 41  where pid=n1 and qno=5;
+ 42  q6:=&Question6;
+ 43  update final_tab
+ 44  set answer=q6
+ 45  where pid=n1 and qno=6;
+ 46  q7:=&Question7;
+ 47  update final_tab
+ 48  set answer=q7
+ 49  where pid=n1 and qno=7;
+ 50  q8:=&Question8;
+ 51  update final_tab
+ 52  set answer=q8
+ 53  where pid=n1 and qno=8;
+ 54  q9:=&Question9;
+ 55  update final_tab
+ 56  set answer=q9
+ 57  where pid=n1 and qno=9;
+ 58  q10:=&Question10;
+ 59  update final_tab
+ 60  set answer=q10
+ 61  where pid=n1 and qno=10;
+ 62  end;
+ 63  /
+
+
+Enter value for slno: 9     *************[ USER INPUT (slno) ]*************************************************
+old  15: no:=&slno;
+new  15: no:=9;
+Enter value for question1: 5.2   *************[ USER INPUT ( 10 ANSWERS SERIALLY ) ]***************************
+old  22: q1:=&Question1;
+new  22: q1:=5.2;
+Enter value for question2: 33
+old  26: q2:=&Question2;
+new  26: q2:=33;
+Enter value for question3: 5.5
+old  30: q3:=&Question3;
+new  30: q3:=5.5;
+Enter value for question4: 6.5
+old  34: q4:=&Question4;
+new  34: q4:=6.5;
+Enter value for question5: 7.5
+old  38: q5:=&Question5;
+new  38: q5:=7.5;
+Enter value for question6: 8.0
+old  42: q6:=&Question6;
+new  42: q6:=8.0;
+Enter value for question7: 8.0
+old  46: q7:=&Question7;
+new  46: q7:=8.0;
+Enter value for question8: 0
+old  50: q8:=&Question8;
+new  50: q8:=0;
+Enter value for question9: 112
+old  54: q9:=&Question9;
+new  54: q9:=112;
+Enter value for question10: 0
+old  58: q10:=&Question10;
+new  58: q10:=0;
+
+PL/SQL procedure successfully completed.    **********************[ Another record added ]******************************
+
+SQL> declare          **********************[ For another record ]*****************************
+  2  no number(8);
+  3  n1 number(8);
+  4  q1 number(8,2);
+  5  q2 number(8,2);
+  6  q3 number(8,2);
+  7  q4 number(8,2);
+  8  q5 number(8,2);
+  9  q6 number(8,2);
+ 10  q7 number(8,2);
+ 11  q8 number(8,2);
+ 12  q9 number(8,2);
+ 13  q10 number(8,2);
+ 14  begin
+ 15  no:=&slno;
+ 16  select pid into n1 from slno_tab where autoslno=no;
+ 17  for i in 1..10 loop
+ 18  insert into final_tab
+ 19  (pid,qno,slno)
+ 20  values(n1,i,no);
+ 21  end loop;
+ 22  q1:=&Question1;
+ 23  update final_tab
+ 24  set answer=q1
+ 25  where pid=n1 and qno=1;
+ 26  q2:=&Question2;
+ 27  update final_tab
+ 28  set answer=q2
+ 29  where pid=n1 and qno=2;
+ 30  q3:=&Question3;
+ 31  update final_tab
+ 32  set answer=q3
+ 33  where pid=n1 and qno=3;
+ 34  q4:=&Question4;
+ 35  update final_tab
+ 36  set answer=q4
+ 37  where pid=n1 and qno=4;
+ 38  q5:=&Question5;
+ 39  update final_tab
+ 40  set answer=q5
+ 41  where pid=n1 and qno=5;
+ 42  q6:=&Question6;
+ 43  update final_tab
+ 44  set answer=q6
+ 45  where pid=n1 and qno=6;
+ 46  q7:=&Question7;
+ 47  update final_tab
+ 48  set answer=q7
+ 49  where pid=n1 and qno=7;
+ 50  q8:=&Question8;
+ 51  update final_tab
+ 52  set answer=q8
+ 53  where pid=n1 and qno=8;
+ 54  q9:=&Question9;
+ 55  update final_tab
+ 56  set answer=q9
+ 57  where pid=n1 and qno=9;
+ 58  q10:=&Question10;
+ 59  update final_tab
+ 60  set answer=q10
+ 61  where pid=n1 and qno=10;
+ 62  end;
+ 63  /
+
+
+
+Enter value for slno: 10     *************[ USER INPUT (slno) ]*************************************************
+old  15: no:=&slno;
+new  15: no:=10;
+Enter value for question1: 5.2    *************[ USER INPUT ( 10 ANSWERS SERIALLY ) ]***************************
+old  22: q1:=&Question1;
+new  22: q1:=5.2;
+Enter value for question2: 33
+old  26: q2:=&Question2;
+new  26: q2:=33;
+Enter value for question3: 5.5
+old  30: q3:=&Question3;
+new  30: q3:=5.5;
+Enter value for question4: 6
+old  34: q4:=&Question4;
+new  34: q4:=6;
+Enter value for question5: 7.5
+old  38: q5:=&Question5;
+new  38: q5:=7.5;
+Enter value for question6: 0
+old  42: q6:=&Question6;
+new  42: q6:=0;
+Enter value for question7: 9
+old  46: q7:=&Question7;
+new  46: q7:=9;
+Enter value for question8: 0
+old  50: q8:=&Question8;
+new  50: q8:=0;
+Enter value for question9: 112
+old  54: q9:=&Question9;
+new  54: q9:=112;
+Enter value for question10: 0
+old  58: q10:=&Question10;
+new  58: q10:=0;
+
+PL/SQL procedure successfully completed.    **********************[ Another record added ]******************************
+
+SQL> declare           **********************[ For another record ]*****************************
+  2  no number(8);
+  3  n1 number(8);
+  4  q1 number(8,2);
+  5  q2 number(8,2);
+  6  q3 number(8,2);
+  7  q4 number(8,2);
+  8  q5 number(8,2);
+  9  q6 number(8,2);
+ 10  q7 number(8,2);
+ 11  q8 number(8,2);
+ 12  q9 number(8,2);
+ 13  q10 number(8,2);
+ 14  begin
+ 15  no:=&slno;
+ 16  select pid into n1 from slno_tab where autoslno=no;
+ 17  for i in 1..10 loop
+ 18  insert into final_tab
+ 19  (pid,qno,slno)
+ 20  values(n1,i,no);
+ 21  end loop;
+ 22  q1:=&Question1;
+ 23  update final_tab
+ 24  set answer=q1
+ 25  where pid=n1 and qno=1;
+ 26  q2:=&Question2;
+ 27  update final_tab
+ 28  set answer=q2
+ 29  where pid=n1 and qno=2;
+ 30  q3:=&Question3;
+ 31  update final_tab
+ 32  set answer=q3
+ 33  where pid=n1 and qno=3;
+ 34  q4:=&Question4;
+ 35  update final_tab
+ 36  set answer=q4
+ 37  where pid=n1 and qno=4;
+ 38  q5:=&Question5;
+ 39  update final_tab
+ 40  set answer=q5
+ 41  where pid=n1 and qno=5;
+ 42  q6:=&Question6;
+ 43  update final_tab
+ 44  set answer=q6
+ 45  where pid=n1 and qno=6;
+ 46  q7:=&Question7;
+ 47  update final_tab
+ 48  set answer=q7
+ 49  where pid=n1 and qno=7;
+ 50  q8:=&Question8;
+ 51  update final_tab
+ 52  set answer=q8
+ 53  where pid=n1 and qno=8;
+ 54  q9:=&Question9;
+ 55  update final_tab
+ 56  set answer=q9
+ 57  where pid=n1 and qno=9;
+ 58  q10:=&Question10;
+ 59  update final_tab
+ 60  set answer=q10
+ 61  where pid=n1 and qno=10;
+ 62  end;
+ 63  /
+
+
+
+Enter value for slno: 11    *************[ USER INPUT (slno) ]*************************************************
+old  15: no:=&slno;
+new  15: no:=11;
+Enter value for question1: 5.2    *************[ USER INPUT ( 10 ANSWERS SERIALLY ) ]***************************
+old  22: q1:=&Question1;
+new  22: q1:=5.2;
+Enter value for question2: 33
+old  26: q2:=&Question2;
+new  26: q2:=33;
+Enter value for question3: 5.5
+old  30: q3:=&Question3;
+new  30: q3:=5.5;
+Enter value for question4: 6.5
+old  34: q4:=&Question4;
+new  34: q4:=6.5;
+Enter value for question5: 7.5
+old  38: q5:=&Question5;
+new  38: q5:=7.5;
+Enter value for question6: 0
+old  42: q6:=&Question6;
+new  42: q6:=0;
+Enter value for question7: 0
+old  46: q7:=&Question7;
+new  46: q7:=0;
+Enter value for question8: 0
+old  50: q8:=&Question8;
+new  50: q8:=0;
+Enter value for question9: 0
+old  54: q9:=&Question9;
+new  54: q9:=0;
+Enter value for question10: 0
+old  58: q10:=&Question10;
+new  58: q10:=0;
+
+PL/SQL procedure successfully completed.    **********************[ Another record added ]******************************
+
+SQL> declare           **********************[ For another record ]*****************************
+  2  no number(8);
+  3  n1 number(8);
+  4  q1 number(8,2);
+  5  q2 number(8,2);
+  6  q3 number(8,2);
+  7  q4 number(8,2);
+  8  q5 number(8,2);
+  9  q6 number(8,2);
+ 10  q7 number(8,2);
+ 11  q8 number(8,2);
+ 12  q9 number(8,2);
+ 13  q10 number(8,2);
+ 14  begin
+ 15  no:=&slno;
+ 16  select pid into n1 from slno_tab where autoslno=no;
+ 17  for i in 1..10 loop
+ 18  insert into final_tab
+ 19  (pid,qno,slno)
+ 20  values(n1,i,no);
+ 21  end loop;
+ 22  q1:=&Question1;
+ 23  update final_tab
+ 24  set answer=q1
+ 25  where pid=n1 and qno=1;
+ 26  q2:=&Question2;
+ 27  update final_tab
+ 28  set answer=q2
+ 29  where pid=n1 and qno=2;
+ 30  q3:=&Question3;
+ 31  update final_tab
+ 32  set answer=q3
+ 33  where pid=n1 and qno=3;
+ 34  q4:=&Question4;
+ 35  update final_tab
+ 36  set answer=q4
+ 37  where pid=n1 and qno=4;
+ 38  q5:=&Question5;
+ 39  update final_tab
+ 40  set answer=q5
+ 41  where pid=n1 and qno=5;
+ 42  q6:=&Question6;
+ 43  update final_tab
+ 44  set answer=q6
+ 45  where pid=n1 and qno=6;
+ 46  q7:=&Question7;
+ 47  update final_tab
+ 48  set answer=q7
+ 49  where pid=n1 and qno=7;
+ 50  q8:=&Question8;
+ 51  update final_tab
+ 52  set answer=q8
+ 53  where pid=n1 and qno=8;
+ 54  q9:=&Question9;
+ 55  update final_tab
+ 56  set answer=q9
+ 57  where pid=n1 and qno=9;
+ 58  q10:=&Question10;
+ 59  update final_tab
+ 60  set answer=q10
+ 61  where pid=n1 and qno=10;
+ 62  end;
+ 63  /
+
+
+
+Enter value for slno: 12     *************[ USER INPUT (slno) ]*************************************************
+old  15: no:=&slno;
+new  15: no:=12;
+Enter value for question1: 5.2    *************[ USER INPUT ( 10 ANSWERS SERIALLY ) ]***************************
+old  22: q1:=&Question1;
+new  22: q1:=5.2;
+Enter value for question2: 33
+old  26: q2:=&Question2;
+new  26: q2:=33;
+Enter value for question3: 5.5
+old  30: q3:=&Question3;
+new  30: q3:=5.5;
+Enter value for question4: 6.5
+old  34: q4:=&Question4;
+new  34: q4:=6.5;
+Enter value for question5: 7.5
+old  38: q5:=&Question5;
+new  38: q5:=7.5;
+Enter value for question6: 8.0
+old  42: q6:=&Question6;
+new  42: q6:=8.0;
+Enter value for question7: 8.0
+old  46: q7:=&Question7;
+new  46: q7:=8.0;
+Enter value for question8: 0
+old  50: q8:=&Question8;
+new  50: q8:=0;
+Enter value for question9: 112
+old  54: q9:=&Question9;
+new  54: q9:=112;
+Enter value for question10: 50000
+old  58: q10:=&Question10;
+new  58: q10:=50000;
+
+PL/SQL procedure successfully completed.    **********************[ Another record added ]******************************
+
+SQL> select * from final_tab;
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1001          1        5.2                     1                          
+      1001          2         33                     1                          
+      1001          3        5.5                     1                          
+      1001          4          6                     1                          
+      1001          5        7.5                     1                          
+      1001          6          0                     1                          
+      1001          7          9                     1                          
+      1001          8          0                     1                          
+      1001          9        112                     1                          
+      1001         10          0                     1                          
+      1005          1         33                     2                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1005          2         33                     2                          
+      1005          3         45                     2                          
+      1005          4         76                     2                          
+      1005          5          0                     2                          
+      1005          6          8                     2                          
+      1005          7          8                     2                          
+      1005          8          3                     2                          
+      1005          9        112                     2                          
+      1005         10         54                     2                          
+      1002          1        5.2                     3                          
+      1002          2         33                     3                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1002          3        5.5                     3                          
+      1002          4        6.5                     3                          
+      1002          5        7.5                     3                          
+      1002          6          8                     3                          
+      1002          7          0                     3                          
+      1002          8          0                     3                          
+      1002          9        112                     3                          
+      1002         10         43                     3                          
+      1004          1        5.2                     4                          
+      1004          2         33                     4                          
+      1004          3        5.5                     4                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1004          4          6                     4                          
+      1004          5        7.5                     4                          
+      1004          6          0                     4                          
+      1004          7          9                     4                          
+      1004          8          0                     4                          
+      1004          9        112                     4                          
+      1004         10          0                     4                          
+      1003          1        5.2                     5                          
+      1003          2         33                     5                          
+      1003          3        5.5                     5                          
+      1003          4        6.5                     5                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1003          5        7.5                     5                          
+      1003          6          0                     5                          
+      1003          7          0                     5                          
+      1003          8          0                     5                          
+      1003          9        112                     5                          
+      1003         10      50000                     5                          
+      1006          1        5.2                     6                          
+      1006          2         33                     6                          
+      1006          3        5.5                     6                          
+      1006          4        6.5                     6                          
+      1006          5        7.5                     6                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1006          6          8                     6                          
+      1006          7          8                     6                          
+      1006          8          0                     6                          
+      1006          9        112                     6                          
+      1006         10         64                     6                          
+      1007          1        5.2                     7                          
+      1007          2         33                     7                          
+      1007          3        5.5                     7                          
+      1007          4        6.5                     7                          
+      1007          5        7.5                     7                          
+      1007          6          0                     7                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1007          7          0                     7                          
+      1007          8          0                     7                          
+      1007          9          0                     7                          
+      1007         10          0                     7                          
+      1008          1        5.2                     8                          
+      1008          2         33                     8                          
+      1008          3        5.5                     8                          
+      1008          4        6.5                     8                          
+      1008          5        7.5                     8                          
+      1008          6          0                     8                          
+      1008          7          0                     8                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1008          8         56                     8                          
+      1008          9          0                     8                          
+      1008         10          0                     8                          
+      1010          1        5.2                     9                          
+      1010          2         33                     9                          
+      1010          3        5.5                     9                          
+      1010          4        6.5                     9                          
+      1010          5        7.5                     9                          
+      1010          6          8                     9                          
+      1010          7          8                     9                          
+      1010          8          0                     9                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1010          9        112                     9                          
+      1010         10          0                     9                          
+      1009          1        5.2                    10                          
+      1009          2         33                    10                          
+      1009          3        5.5                    10                          
+      1009          4          6                    10                          
+      1009          5        7.5                    10                          
+      1009          6          0                    10                          
+      1009          7          9                    10                          
+      1009          8          0                    10                          
+      1009          9        112                    10                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1009         10          0                    10                          
+      1011          1        5.2                    11                          
+      1011          2         33                    11                          
+      1011          3        5.5                    11                          
+      1011          4        6.5                    11                          
+      1011          5        7.5                    11                          
+      1011          6          0                    11                          
+      1011          7          0                    11                          
+      1011          8          0                    11                          
+      1011          9          0                    11                          
+      1011         10          0                    11                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1012          1        5.2                    12                          
+      1012          2         33                    12                          
+      1012          3        5.5                    12                          
+      1012          4        6.5                    12                          
+      1012          5        7.5                    12                          
+      1012          6          8                    12                          
+      1012          7          8                    12                          
+      1012          8          0                    12                          
+      1012          9        112                    12                          
+      1012         10      50000                    12                          
+
+120 rows selected.
+
+
+
+**********************************************[ Question : 3 ]*********************************************************************
+                           Query: Write a query to update result (1 for correct answer, o for incorrect answer)
+
+
+
+SQL> create or replace procedure pro_final_tab
+  2  is
+  3  n1 number(8,2);
+  4  n2 number(8,2);
+  5  n3 number(8);
+  6  begin
+  7  select count(*) into n3 from slno_tab;
+  8  for i in 1..n3 loop
+  9  for j in 1..10 loop
+ 10  select answer into n1 from answer_tab where qno=j;
+ 11  select answer into n2 from final_tab where qno=j and slno=i;
+ 12  if n1=n2 then
+ 13  update final_tab
+ 14  set result=1
+ 15  where qno=j and slno=i;
+ 16  else
+ 17  update final_tab
+ 18  set result=0
+ 19  where qno=j and slno=i;
+ 20  end if;
+ 21  end loop;
+ 22  end loop;
+ 23  end;
+ 24  /
+
+Procedure created.
+
+SQL> execute pro_final_tab;
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from final_tab;
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1001          1        5.2          1          1                          
+      1001          2         33          1          1                          
+      1001          3        5.5          1          1                          
+      1001          4          6          0          1                          
+      1001          5        7.5          1          1                          
+      1001          6          0          0          1                          
+      1001          7          9          0          1                          
+      1001          8          0          1          1                          
+      1001          9        112          1          1                          
+      1001         10          0          0          1                          
+      1005          1         33          0          2                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1005          2         33          1          2                          
+      1005          3         45          0          2                          
+      1005          4         76          0          2                          
+      1005          5          0          0          2                          
+      1005          6          8          1          2                          
+      1005          7          8          1          2                          
+      1005          8          3          0          2                          
+      1005          9        112          1          2                          
+      1005         10         54          0          2                          
+      1002          1        5.2          1          3                          
+      1002          2         33          1          3                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1002          3        5.5          1          3                          
+      1002          4        6.5          1          3                          
+      1002          5        7.5          1          3                          
+      1002          6          8          1          3                          
+      1002          7          0          0          3                          
+      1002          8          0          1          3                          
+      1002          9        112          1          3                          
+      1002         10         43          0          3                          
+      1004          1        5.2          1          4                          
+      1004          2         33          1          4                          
+      1004          3        5.5          1          4                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1004          4          6          0          4                          
+      1004          5        7.5          1          4                          
+      1004          6          0          0          4                          
+      1004          7          9          0          4                          
+      1004          8          0          1          4                          
+      1004          9        112          1          4                          
+      1004         10          0          0          4                          
+      1003          1        5.2          1          5                          
+      1003          2         33          1          5                          
+      1003          3        5.5          1          5                          
+      1003          4        6.5          1          5                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1003          5        7.5          1          5                          
+      1003          6          0          0          5                          
+      1003          7          0          0          5                          
+      1003          8          0          1          5                          
+      1003          9        112          1          5                          
+      1003         10      50000          1          5                          
+      1006          1        5.2          1          6                          
+      1006          2         33          1          6                          
+      1006          3        5.5          1          6                          
+      1006          4        6.5          1          6                          
+      1006          5        7.5          1          6                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1006          6          8          1          6                          
+      1006          7          8          1          6                          
+      1006          8          0          1          6                          
+      1006          9        112          1          6                          
+      1006         10         64          0          6                          
+      1007          1        5.2          1          7                          
+      1007          2         33          1          7                          
+      1007          3        5.5          1          7                          
+      1007          4        6.5          1          7                          
+      1007          5        7.5          1          7                          
+      1007          6          0          0          7                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1007          7          0          0          7                          
+      1007          8          0          1          7                          
+      1007          9          0          0          7                          
+      1007         10          0          0          7                          
+      1008          1        5.2          1          8                          
+      1008          2         33          1          8                          
+      1008          3        5.5          1          8                          
+      1008          4        6.5          1          8                          
+      1008          5        7.5          1          8                          
+      1008          6          0          0          8                          
+      1008          7          0          0          8                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1008          8         56          0          8                          
+      1008          9          0          0          8                          
+      1008         10          0          0          8                          
+      1010          1        5.2          1          9                          
+      1010          2         33          1          9                          
+      1010          3        5.5          1          9                          
+      1010          4        6.5          1          9                          
+      1010          5        7.5          1          9                          
+      1010          6          8          1          9                          
+      1010          7          8          1          9                          
+      1010          8          0          1          9                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1010          9        112          1          9                          
+      1010         10          0          0          9                          
+      1009          1        5.2          1         10                          
+      1009          2         33          1         10                          
+      1009          3        5.5          1         10                          
+      1009          4          6          0         10                          
+      1009          5        7.5          1         10                          
+      1009          6          0          0         10                          
+      1009          7          9          0         10                          
+      1009          8          0          1         10                          
+      1009          9        112          1         10                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1009         10          0          0         10                          
+      1011          1        5.2          1         11                          
+      1011          2         33          1         11                          
+      1011          3        5.5          1         11                          
+      1011          4        6.5          1         11                          
+      1011          5        7.5          1         11                          
+      1011          6          0          0         11                          
+      1011          7          0          0         11                          
+      1011          8          0          1         11                          
+      1011          9          0          0         11                          
+      1011         10          0          0         11                          
+
+       PID        QNO     ANSWER     RESULT       SLNO                          
+---------- ---------- ---------- ---------- ----------                          
+      1012          1        5.2          1         12                          
+      1012          2         33          1         12                          
+      1012          3        5.5          1         12                          
+      1012          4        6.5          1         12                          
+      1012          5        7.5          1         12                          
+      1012          6          8          1         12                          
+      1012          7          8          1         12                          
+      1012          8          0          1         12                          
+      1012          9        112          1         12                          
+      1012         10      50000          1         12                          
+
+120 rows selected.
+
+
+
+
+
+
+**********************************************[ Question : 4 ]********************************************************************************
+                      Query: Declare Top 10. Remember that, number of students can get same marks.
+
+
+
+
+
+
+
+SQL> create table t_marks
+  2  (
+  3  pid number(8),
+  4  total_marks number(8),
+  5  slno number(8)
+  6  );
+
+Table created.
+
+SQL> create or replace procedure pro_t_marks      ***************[ For summation of all result on FINAL_TAB table ]*******************
+  2  is
+  3  n1 number(8);
+  4  n2 number(8);
+  5  n3 number(8);
+  6  begin
+  7  select count(*) into n3 from slno_tab;
+  8  delete from t_marks;
+  9  for i in 1..n3 loop
+ 10  select sum(result) into n1 from final_tab where slno=i;
+ 11  select pid into n2 from slno_tab where autoslno=i;
+ 12  insert into t_marks
+ 13  values(n2,n1,i);
+ 14  end loop;
+ 15  end;
+ 16  /
+
+Procedure created.
+
+SQL> execute pro_t_marks;
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from t_marks;
+
+       PID TOTAL_MARKS       SLNO                                               
+---------- ----------- ----------                                               
+      1001           6          1                                               
+      1005           4          2                                               
+      1002           8          3                                               
+      1004           6          4                                               
+      1003           8          5                                               
+      1006           9          6                                               
+      1007           6          7                                               
+      1008           5          8                                               
+      1010           9          9                                               
+      1009           6         10                                               
+      1011           6         11                                               
+
+       PID TOTAL_MARKS       SLNO                                               
+---------- ----------- ----------                                               
+      1012          10         12                                               
+
+12 rows selected.
+
+
+SQL> create table t_marks_2
+  2  (
+  3  pid_2 number(8),
+  4  total_marks_2 number(8),
+  5  slno_2 number(8)
+  6  );
+
+Table created.
+
+SQL> create or replace procedure pro_t_marks_2   *****************[ For arranging total_marks in descending order ]*******************
+  2  is
+  3  std t_marks%rowtype;
+  4  cursor c1 is
+  5  select pid,total_marks,slno from t_marks order by total_marks desc, slno asc;
+  6  begin
+  7  open c1;
+  8  delete from t_marks_2;
+  9  loop
+ 10  fetch c1 into std;
+ 11  exit when c1%notfound;
+ 12  insert into t_marks_2
+ 13  (pid_2,total_marks_2,slno_2)
+ 14  values(std.pid,std.total_marks,std.slno);
+ 15  end loop;
+ 16  close c1;
+ 17  end;
+ 18  /
+
+Procedure created.
+
+SQL> execute pro_t_marks_2;
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from t_marks_2;
+
+     PID_2 TOTAL_MARKS_2     SLNO_2
+---------- ------------- ----------
+      1012            10         12
+      1006             9          6
+      1010             9          9
+      1002             8          3
+      1003             8          5
+      1001             6          1
+      1004             6          4
+      1007             6          7
+      1009             6         10
+      1011             6         11
+      1008             5          8
+
+     PID_2 TOTAL_MARKS_2     SLNO_2
+---------- ------------- ----------
+      1005             4          2
+
+12 rows selected.
+
+
+
+SQL> create table position_number
+  2  (
+  3  posi_no number(8)
+  4  );
+
+Table created.
+                                         *****************[ For inserting (n) number of position ]*******************
+
+SQL> create or replace procedure pro_position_number(n in number)  
+  2  is
+  3  begin
+  4  delete from position_number;
+  5  insert into position_number
+  6  values(n);
+  7  end;
+  8  /
+
+Procedure created.
+
+SQL> execute pro_position_number(10);
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from position_number;
+
+   POSI_NO                                                                      
+----------                                                                      
+        10                                                                      
+
+SQL> create table top
+  2  (
+  3  position number(8),
+  4  pid number(8),
+  5  total_marks number(8),
+  6  slno number(8)
+  7  );
+
+Table created.
+
+
+SQL> create or replace procedure pro_top    *****************[ For finding Top 10 or Top (n number of position) ]*******************
+  2  is
+  3  std t_marks_2%rowtype;
+  4  n1 number(8);
+  5  cursor c1 is
+  6  select * from t_marks_2;
+  7  begin
+  8  select posi_no into n1 from position_number;
+  9  delete from top;
+ 10  open c1;
+ 11  for i in 1..n1 loop
+ 12  fetch c1 into std;
+ 13  insert into top
+ 14  values(i,std.pid_2,std.total_marks_2,std.slno_2);
+ 15  end loop;
+ 16  close c1;
+ 17  end;
+ 18  /
+
+Procedure created.
+
+SQL> execute pro_top;
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from top;
+
+  POSITION        PID TOTAL_MARKS       SLNO
+---------- ---------- ----------- ----------
+         1       1012          10         12
+         2       1006           9          6
+         3       1010           9          9
+         4       1002           8          3
+         5       1003           8          5
+         6       1001           6          1
+         7       1004           6          4
+         8       1007           6          7
+         9       1009           6         10
+        10       1011           6         11
+
+10 rows selected.
+
+SQL> exit
